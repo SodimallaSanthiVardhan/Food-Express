@@ -1,0 +1,148 @@
+.order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2vw;
+  padding: 2rem;
+  background: #f4f4f4;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.05);
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.07);
+}
+
+/* LEFT SIDE */
+.palce-order-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.palce-order-left h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.palce-order-left input {
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1.5px solid #ddd;
+  border-radius: 14px;
+  background: #fefefe;
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.palce-order-left input:focus {
+  border-color: #ff5a3c;
+  box-shadow: 0 0 0 4px rgba(255, 90, 60, 0.2);
+  outline: none;
+}
+
+/* MULTI FIELD WRAPPER */
+.multi-fields {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.multi-fields input {
+  flex: 1 1 48%;
+}
+
+/* RIGHT SIDE - CART TOTAL */
+.cart-total {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2rem;
+  min-width: 280px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-total h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.cart-total-details:last-child {
+  font-weight: 600;
+  border-bottom: none;
+}
+
+/* Proceed Button */
+.proceed {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.proceed:hover {
+  background: #333;
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  form {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .cart-total {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .multi-fields {
+    flex-direction: column;
+  }
+
+  .multi-fields input {
+    flex: 1 1 100%;
+  }
+
+  .proceed {
+    width: 100%;
+  }
+
+  .palce-order-left h1,
+  .cart-total h1 {
+    font-size: 1.5rem;
+  }
+}

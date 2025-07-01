@@ -1,0 +1,74 @@
+.foodlist-sec {
+  padding: 2rem;
+  background-color: #FDF5EC;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+
+  width: 100%;
+}
+
+.foodlist-sec h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.food-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.food-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.card-details {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-details h4 {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.card-details p {
+  margin: 0.2rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.remove-btn {
+  background-color: #ff7f50;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff7f50;
+}

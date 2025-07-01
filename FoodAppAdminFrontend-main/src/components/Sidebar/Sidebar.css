@@ -1,0 +1,145 @@
+/* ==== DESKTOP SIDEBAR ==== */
+.sidebar {
+  height: 100vh;
+  width: 240px;
+  background: #ffffff;
+  border-right: 1px solid #e5e5e5;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  padding-top: 1rem;
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed {
+  width: 72px;
+}
+
+/* ==== TOGGLE ICON ==== */
+.sidebar-toggle {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* ==== SIDEBAR OPTIONS ==== */
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.sidebar-option img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.sidebar-option span {
+  white-space: nowrap;
+}
+
+.sidebar-option:hover {
+  background: #f4f4f4;
+}
+
+.sidebar-option.active {
+  background: #f4f4f4;
+  font-weight: 600;
+  color: #000;
+}
+
+.sidebar-option.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12%;
+  height: 75%;
+  width: 4px;
+  background: #ff5a3c;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ==== TABLET / MOBILE (< 768px) ==== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    background: #fff;
+    z-index: 999;
+    width: 240px;
+    padding-top: 1rem;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    background: #fff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .sidebar-options {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .sidebar-option {
+    gap: 0.6rem;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.92rem;
+  }
+
+  .sidebar-option img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidebar-toggle {
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.4rem;
+  }
+}

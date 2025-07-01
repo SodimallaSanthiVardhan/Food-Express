@@ -1,0 +1,145 @@
+:root {
+  --font-color: #111111;
+  --highlight: #FF3C1F;
+}
+
+/* Main Container */
+.explore-div {
+  padding: 20px;
+  margin: 0 2vw;
+  overflow: hidden;
+}
+
+.explore-h1 {
+  width: 50vw;
+}
+
+.explore-h1 h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.explore-h1 p {
+  font-size: 0.95rem;
+  color: gray;
+}
+
+/* Scroll Area */
+.scroll-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Scrollable Content with Animation */
+.scroll-content {
+  display: flex;
+  gap: 30px;
+  animation: scroll-left 25s linear infinite;
+  align-items: center;
+}
+
+/* Pause scroll when hovered */
+.scroll-container:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual Items */
+.menu-list-item {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 110px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.menu-list-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.menu-list-item:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px var(--highlight);
+}
+
+.menu-list-item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--font-color);
+  transition: color 0.3s ease;
+}
+
+.menu-list-item:hover p {
+  color: var(--highlight);
+}
+
+/* Active Category Styling */
+.active-category img {
+  border: 3px solid var(--highlight);
+  padding: 2px;
+  box-shadow: 0 0 12px var(--highlight);
+}
+
+@media (max-width: 400px) {
+  .explore-div {
+    padding: 16px 10px;
+    margin: 0;
+  }
+
+  .explore-h1 {
+    width: 100%;
+  }
+
+  .explore-h1 h1 {
+    font-size: 1.5rem;
+  }
+
+  .explore-h1 p {
+    font-size: 0.85rem;
+  }
+
+  .scroll-container {
+    margin-top: 16px;
+  }
+
+  .scroll-content {
+    gap: 20px;
+  }
+
+  .menu-list-item {
+    width: 90px;
+  }
+
+  .menu-list-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .menu-list-item p {
+    font-size: 0.8rem;
+  }
+
+  .active-category img {
+    border-width: 2px;
+    box-shadow: 0 0 8px var(--highlight);
+  }
+}

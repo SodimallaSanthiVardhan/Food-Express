@@ -1,0 +1,111 @@
+.admin-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 5vw;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  z-index: 999;
+  position: relative;
+}
+
+/* Left: Logo + Brand Name */
+.admin-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.admin-logo {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1D2530;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Center Title */
+.admin-title-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.admin-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1D2530;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+/* Right: Role + Profile */
+.admin-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 1;
+}
+
+.admin-role {
+  font-size: 0.9rem;
+  background: #f1f1f1;
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: #444;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.admin-profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/* ✅ Responsive up to 400px */
+@media (max-width: 400px) {
+  .admin-nav-bar {
+    padding: 0.5rem 1rem;
+  }
+
+  .admin-logo {
+    width: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .admin-title {
+    font-size: 1.1rem;
+  }
+
+  .admin-role {
+    display: none;
+  }
+
+  .admin-profile {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin-right {
+    gap: 0.5rem;
+  }
+}

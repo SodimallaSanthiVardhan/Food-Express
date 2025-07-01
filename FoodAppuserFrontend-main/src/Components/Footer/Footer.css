@@ -1,0 +1,147 @@
+:root {
+  --footer-bg: #f9f9f9;
+  --footer-text: #333;
+  --footer-accent: #FF3C1F;
+  --footer-link: #555;
+  --footer-border: #e4e4e4;
+  --footer-radius: 12px;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  padding: 40px 20px 25px;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--footer-text);
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo img {
+  height: 60px;
+  mix-blend-mode: multiply;
+}
+
+.footer-logo h2 {
+  font-size: 22px;
+  color: var(--footer-text);
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--footer-link);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--footer-accent);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-socials a {
+  font-size: 26px;
+  color: var(--footer-text);
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: var(--footer-accent);
+  color: white;
+  transform: scale(1.15);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--footer-border);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    height: 50px;
+  }
+
+  .footer-logo h2 {
+    font-size: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-socials {
+    gap: 14px;
+  }
+
+  .footer-socials a {
+    font-size: 24px;
+    padding: 9px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+}

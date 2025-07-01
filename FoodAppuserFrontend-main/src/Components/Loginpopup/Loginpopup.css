@@ -1,0 +1,163 @@
+:root {
+  --primary-color: #1D2530;
+  --accent-color: #FF3C1F;
+  --text-color: #111;
+  --background-blur: rgba(255, 255, 255, 0.85);
+  --input-border: rgba(0, 0, 0, 0.1);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  --radius: 16px;
+  --transition: all 0.3s ease;
+}
+
+.login-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.login-div {
+  width: 90%;
+  max-width: 400px;
+  background: var(--background-blur);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.login-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.login-head i {
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text-color);
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.login-head i:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form input {
+  padding: 14px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.2s;
+}
+
+.form input:focus {
+  border-color: var(--accent-color);
+}
+
+.login-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ckeck {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.ckeck input {
+  margin-top: 4px;
+}
+
+.bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.bottom span {
+  color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+.bottom span:hover {
+  color: #e0301d;
+}
+@media (max-width: 400px) {
+  .login-div {
+    padding: 1.5rem;
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .login-head {
+    font-size: 1rem;
+  }
+
+  .login-head i {
+    font-size: 1.2rem;
+  }
+
+  .form input {
+    font-size: 0.9rem;
+    padding: 12px 10px;
+  }
+
+  .login-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .bottom {
+    font-size: 0.85rem;
+  }
+
+  .ckeck {
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+} 
