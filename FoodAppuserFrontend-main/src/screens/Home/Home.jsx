@@ -57,7 +57,7 @@ const Home = () => {
     <div className="home">
       <header className="hero" role="banner">
         <video
-          src="/src/assets/8626672-uhd_3840_2160_25fps.mp4" // Make sure this file exists
+          src="/src/assets/Hero.mp4" // Make sure this file exists
           className="hero-video"
           autoPlay
           muted
