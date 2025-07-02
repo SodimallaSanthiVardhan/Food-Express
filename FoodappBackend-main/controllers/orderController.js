@@ -3,7 +3,7 @@ const userModel = require('../models/userModel')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 const placeOrder = async (req,res)=>{
-    const frontend_url = `http://localhost:5174`
+    const frontend_url = `https://food-express-frontend-yh15.onrender.com/myorders`
     try{
         const neworder = await orderModel.create({
             userId:req.userId,
