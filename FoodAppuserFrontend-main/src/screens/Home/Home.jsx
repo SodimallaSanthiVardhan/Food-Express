@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
 import ExploreMenu from '../../Components/ExploreMenu/ExploreMenu';
 import FoodItems from '../../Components/FoodItems/FoodItems';
+import video from '../../assets/Hero.mp4'
 
 const Home = () => {
   const [category, setCategory] = useState('all');
@@ -57,7 +58,7 @@ const Home = () => {
     <div className="home">
       <header className="hero" role="banner">
         <video
-          src="/src/assets/Hero.mp4" // Make sure this file exists
+          src={video}
           className="hero-video"
           autoPlay
           muted
