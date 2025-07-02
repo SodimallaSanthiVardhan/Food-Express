@@ -18,4 +18,4 @@ export const assets ={
     foodfavicon
 }
 
-export const url = 'https://food-delivery-backend-5b6g.onrender.com'
+export const url = 'https://food-express-backend-r735.onrender.com'
