@@ -1,108 +1,149 @@
 .screen.order {
-  background-color: #FDF5EC;
-  padding: 2rem;
+  background: linear-gradient(135deg, #fefaf5, #fff7ee);
+  padding: 2.5rem 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .screen.order h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: #333;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2e2e2e;
 }
 
 .order-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .order-item {
   display: flex;
   gap: 1.5rem;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  padding: 1.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .order-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
 }
 
 .order-item img {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   margin-top: 0.5rem;
-  transition: scale ease .2s;
+  transition: transform 0.2s ease;
 }
-.order-item:hover img{
-    scale:1.2;
+.order-item:hover img {
+  transform: scale(1.2);
 }
 
 .order-item > div {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.7rem;
 }
 
 .order-item-food {
   font-weight: 500;
+  font-size: 1.05rem;
   color: #444;
-  font-size: 1rem;
 }
 
 .order-item-name {
-  font-weight: bold;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: #222;
 }
 
 .order-item-address p {
   margin: 2px 0;
-  color: #555;
   font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
 }
 
 .order-item-phone {
-  font-weight: 500;
   color: #d35400;
-}
-
-.order-item p:nth-last-of-type(2),
-.order-item p:nth-last-of-type(1) {
-  color: #333;
   font-weight: 500;
 }
 
 .order-item select {
-  margin-top: 0.8rem;
-  width: fit-content;
+  margin-top: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid #ddd;
   border-radius: 10px;
   font-size: 0.95rem;
-  background-color: #fafafa;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
   cursor: pointer;
-  transition: border-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.order-item select:hover,
-.order-item select:focus {
-  border-color: #ff7f50;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.15);
+.status-dropdown.food-processing {
+  border-left: 6px solid #f39c12;
+}
+.status-dropdown.out-for-delivery {
+  border-left: 6px solid #3498db;
+}
+.status-dropdown.delivered {
+  border-left: 6px solid #2ecc71;
+}
+
+.order-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.mark-delivered-btn {
+  background: #2ecc71;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mark-delivered-btn:hover {
+  background: #27ae60;
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
   .order-item {
     flex-direction: column;
-    align-items: flex-start;
+    padding: 1.5rem;
   }
 
   .order-item img {
@@ -111,5 +152,9 @@
 
   .order-item > div {
     width: 100%;
+  }
+
+  .screen.order h3 {
+    font-size: 1.8rem;
   }
 }

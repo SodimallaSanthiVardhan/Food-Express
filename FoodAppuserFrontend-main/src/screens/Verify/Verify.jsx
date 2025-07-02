@@ -28,6 +28,7 @@ const Verify = () => {
 
     useEffect(()=>{
         verifyPayment()
+        navigate('/myorders')
     },[])
 
   return (
