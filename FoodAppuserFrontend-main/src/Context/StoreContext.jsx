@@ -5,7 +5,7 @@ export const StoreContext = createContext();
 const StoreContextProvider = (props) => {
     const [food_list,setfoodlist] = useState([])
     const [cartItems,setcartItems] = useState({});
-    const url = 'http://localhost:4000'
+    const url = 'https://food-express-backend-r735.onrender.com'
     const [token,setToken] = useState('')
 
     const fetchFoodList = async ()=>{
